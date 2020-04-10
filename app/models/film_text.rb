@@ -1,0 +1,2 @@
+class FilmText < ApplicationRecord
+end
