@@ -3,7 +3,8 @@ class Api::V1::FilmsController < ApplicationController
   # GET /films
   def index
     if params[:title]
-      @film = Film.find_by(title: params[:title])
+      value = params[:title].downcase.gsub(/[^[:word:]\s]/, ' ')  #strips out non-alphanumeric characters and replaces with whitespace
+      @film = Film.find_by(title: value)
       if @film
         render json: FilmSerializer.new(@film), status: :ok
       else

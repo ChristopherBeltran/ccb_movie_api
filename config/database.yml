@@ -7,15 +7,15 @@
 default: &default
   adapter: mysql2
   host: 127.0.0.1
-  username: root
+  username: sakila
   port: 3306
 
 development:
   adapter: mysql2
   host: 127.0.0.1
   database: sakila
-  username: root
-  password: Lakeshow24
+  username: sakila
+  password: sakila
   port: 3306
 
 
@@ -26,12 +26,12 @@ test:
   adapter: mysql2
   host: 127.0.0.1
   database: sakila
-  username: root
+  username: sakila
   port: 3306
 
 production:
   adapter: mysql2
   host: 127.0.0.1
   database: sakila
-  username: root
+  username: sakila
   port: 3306
